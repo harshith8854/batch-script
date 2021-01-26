@@ -1,0 +1,8 @@
+:: place this file in the desired folder
+@echo off
+setlocal enableDelayedExpansion
+Rem in the following code each file with 'dReference Material V_' in the name will get replaced by '_space_';
+for %%F in (*.*) do (
+  set "name=%%F"
+  ren "!name!" "!name:dReference Material V_= !"
+)
